@@ -1,0 +1,20 @@
+class NumArray {
+public:
+    vector<int> ans;
+    NumArray(vector<int>& nums) {
+        ans = nums;
+    }
+    
+    void update(int i, int val) {
+        ans[i] = val;
+        
+    }
+    
+    int sumRange(int i, int j) {
+        int sum = 0;
+        for (int a = i; a <= j; a++){
+            sum += ans[a];
+        }
+        return sum;
+    }
+};
